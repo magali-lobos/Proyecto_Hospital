@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/fichaMedica.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.jpg.jpeg" type="image/x-icon">
+    <title>Ficha Médica</title>
+</head>
+<body>
+    <div id= "container">
+        <header>
+            <h1>Ficha médica a completar del/la paciente </h1>
+        </header>
+        <div class="clearfix"></div>
+        <section id="content">
+        </section>
+        <div class="formulario"> <!--Aca se guarda el formulario-->
+            <form action="MediApp.php" method="post">
+                <br>
+                <label>Ingrese el nombre y apellido del paciente:</label>
+                <br>
+                <input type="text"name="NombreyApellido" placeholder="Ingrese nombre y apellido" required>
+                 <br>
+                 <label>Ingrese el DNI del/la paciente: </label>
+                 <br>
+                 <input type="text"name="dni" placeholder="Ingrese el documento" required>
+                 <br>
+                 <label>Fecha de nacimiento: </label>
+                 <br>
+                 <input type="date" name="fecha_nac" required>
+                 <br>
+                 <label>Nacionalidad: </label>
+                 <br>
+                <input type="text"name="nacionalidad" placeholder="Ingrese la nacionalidad." required>
+                     <br>
+                    <label>Sexo</label>
+                    <select type="text" name="genero">
+                    <option value="1">
+                            Mujer
+                    </option>
+                    <option value="2">
+                        Hombre
+                    </option>
+                    <option type="text">
+                        Otro
+                    </option>
+                    </select>
+        <br>
+        <label>Número de telefono: </label>
+        <br>
+        <input type="text" name="telefono" placeholder="Número de telefono" required>
+        <br>
+        <label>Ingrese su domicilio: </label>
+        <br>
+        <input type="text" name="domicilio" placeholder="Ingrese el domicilio" required>
+        <br>
+        <label>Ingrese su barrio: </label>
+        <br>
+        <input type="text" name="barrio" placeholder="Ingrese el barrio" required>
+        <br>
+        <label>Antecedentes medicos: </label>
+        <br>
+        <input type="text" name="antecedes_medicos" placeholder="Ingrese los antecedentes" required>
+        <br>
+        <label>Ingrese  sus antecedentes de interes: </label>
+        <br>
+        <input type="text" name="antecedentes_de_int" placeholder="Ingrese los antecedentes" required>
+        <br>
+        <label>Peso: </label>
+        <input type="text" name="peso" placeholder="Ingrese el peso" requiered>
+        <br>
+        <label>Altura: </label>
+        <input type="text" name="altura" placeholder="Ingrese la altura" required>
+        <br>
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+        </form>
+        </div>
+
+    
+</body>
+</html>

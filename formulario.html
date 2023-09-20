@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./css/formulario.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.jpg.jpeg" type="image/x-icon">
+    <title>Formulario </title>
+
+</head>
+<body>
+    <div id= "container">
+        <header>
+            <h1>Formulario de información del paciente</h1>
+        </header>
+        <div class="clearfix"></div>
+        <section id="content">
+        </section>
+        <div class="formulario"> <!--Aca se guarda el formulario-->
+            <form action="MediApp.php" method="post">
+
+                <br>
+                <label>Ingrese el nombre y apellido del paciente:</label>
+                <br>
+                <input type="text"name="NombreyApellido" placeholder="Ingrese nombre y apellido" required>
+                 <br>
+                 <label>Tipo de llamado: </label>
+                 <br>
+                 <select  type="text" name="Tipo_llamado">
+                     <option value="1">
+                         Emergencia
+                     </option>
+                     <option value="2">
+                         Normal
+                     </option>
+                 </select>
+                 <br>
+                 <label>Ingrese la causa por la que fue ingresada el paciente: </label>
+                 <br>
+                 <input type="text"name="causa" placeholder="Ingrese la causa" required>
+                 <br>
+                 <label>Fecha en el que fue ingresado: </label>
+                 <br>
+                 <input type="date" name="fecha" required>
+                 <br>
+                 <label>Ingrese el área en donde fue realizado el llamado:</label>
+                 <br>
+                 <select type="text" name="area">
+                    <option value="1">
+                        Emergencia
+                    </option>
+                </select>
+                 <br>
+                 <label>Ingrese donde se origino el llamado</label>
+                 <br>
+                     <input type="text"name="origen_llamado" placeholder="Ingrese el origen del llamado." required>
+                     <br>
+                    <label>¿El paciente fue atendido?</label>
+                    <br>
+                    <input type="radio" name="respuesta" value="si" id="si">
+        <label for="si">Sí</label>
+        
+        <input type="radio" name="respuesta" value="no" id="no">
+        <label for="no">No</label>
+        <br>
+        <label>Ingrese el nombre y apellido del efermero/a asignado: </label>
+        <br>
+        <input type="text" name="causa" placeholder="Nombre y apellido del profesional" required>
+        <br>
+
+
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Cancelar">
+        </form>
+        </div>
+
+</body>
+</html>
