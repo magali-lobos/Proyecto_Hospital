@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@500&display=swap'); /*letra importada de googlefonts*/
+
+body{ /*fondo del formulario*/
+  background-color: #0fa1fe;
+  align-items: center;
+  height: 325px;
+  background-repeat: no-repeat;
+}
+header h1{ /*titulo principal*/
+    width: 1350px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: black;
+    text-align: center;
+  }
+
+  #content{ /*fondo del formulario*/
+    background-color: rgb(255, 255, 255);
+    left: 350px;
+    height: 250px;
+    width: 650px;
+    margin: 0px;
+    opacity: 0.5;
+    position: relative;
+    border: 1px solid rgb(9, 6, 194); 
+    border-radius: 5%;
+}
+.formulario{ /*caracteristicas del formulario*/
+    font-family: 'Poppins', sans-serif;
+    position: absolute;
+    top: 100px;
+    left: 480px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+  }
+  .formulario form input{
+    outline: none;
+    border: none;
+  }
+  .formulario form input{
+    border: 2px solid #0fa1fe;
+    margin-top: 10px;
+    background-color: rgb(254, 253, 255);
+    border-radius: 1rem;
+    color: black;
+    width: 200px;
+    padding: 10px;
+  }
+  .formulario form select{
+    border: 2px solid #0fa1fe;
+    margin-top: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1rem;
+    color: black;
+    width: 150px;
+    padding: 10px;
+  }
+
+  /* Estilos para los botones submit y reset */
+.formulario form input[type="submit"], .formulario form input[type="reset"] {
+  background-color: #007bff; /* Cambia el color de fondo */
+  color: #fff; /* Cambia el color del texto */
+  padding: 10px 20px; /* Ajusta el espacio de relleno */
+  border: none; /* Quita el borde */
+  border-radius: 5px; /* Agrega esquinas redondeadas */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+
+}
+
+/* Estilos para los botones cuando se les pasa el mouse por encima */
+.formulario form input[type="submit"]:hover, .formulario form input[type="reset"]:hover {
+  background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
+}

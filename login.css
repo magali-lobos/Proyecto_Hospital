@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@500&display=swap');
+
+*{
+    background-image: url(https://avatars.mds.yandex.net/i?id=18165c3b4248a99bbf69d8cba13c276e59fe2afc-9618143-images-thumbs&n=13) no repeat;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background.jpg')no-repeat;
+    background-color: rgb(0, 236, 158);
+    background-size: cover;
+    background-position: center;
+
+}
+header{ /*Esto agrega la linea azul y el titulo de arriba que se ve en la pagina*/
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: rgb(68, 148, 240);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+.logo{ /*Esto modifica el titulo de MediApp que sale arriba*/
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+.wrapper{ /*este es el cuadrado que contiene el formulario del login*/
+    width: 400px;
+    height: 440x;
+    background: transparent;
+    border: 2px solid rgb(140, 222, 228);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgb(0, 8, 8);
+    position: absolute; /*Las ultimas 4 lines de codigo hacen que la caja este centrada*/
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px; ;
+}
+.form-box h2{
+    font-size: 2em;
+    color: black;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+}
+.input-box{ /*esto hace que el formulario se mantenga ordenado dentro del cuadrado*/
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid black;
+    margin: 30px 0;
+
+    position: relative;
+    margin-bottom: 20px; /* Espacio entre campos */
+} 
+input:focus + label {
+    top: 5px; /* Desplazar hacia arriba cuando el campo está enfocado */
+}
+.label{
+    position: absolute;
+    top: 20px; /* Altura inicial */
+    left: 10px; /* Ajusta el valor según sea necesario */
+    transition: top 0.3s ease; /* Efecto de transición suave */
+}
+
+.input-box  label { /*Ordena los textos del label */
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: black;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box input:focus~label
+
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    height: 80px; /*determina la altura del texto */
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: black;
+    font-weight: 400; /*ancho de la letra*/
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{ /*    Modifica los iconos que salen al lado de los input en el formulario*/
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: rgb(21, 26, 26);
+    line-height: 57px;
+}
+.remember-forgot{
+    font-size: .9em;
+    color: darkblue;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label input{
+    accent-color: rgb(14, 15, 68);
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: black;
+    text-decoration: none;
+}
+.btn{ /*boton de iniciar sesion*/
+    width: 100%;
+    height: 45px ;
+    background: rgb(66, 73, 150);
+    border: 6px;
+    outline: none;
+    border-radius:  6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: rgb(235, 222, 222);
+    font-weight: 500;
+}
+
+
