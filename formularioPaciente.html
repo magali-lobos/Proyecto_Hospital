@@ -9,8 +9,8 @@
     <title>Formulario </title>
 
 </head>
-<body>
-    <div id= "container">
+    <body>
+    <div id= "container"><!--Todos los datos que se piden a continuación estarán dentro del contenedor, esto se podrá utilizar para editar el estilo luego.-->
         <header>
             <h1>Formulario de información del paciente</h1>
         </header>
@@ -18,16 +18,16 @@
         <section id="content">
         </section>
         <div class="formulario"> <!--Aca se guarda el formulario-->
-            <form action="MediApp.php" method="post">
+            <form action="formularioPaciente.php" method="post">
 
                 <br>
-                <label>Ingrese el nombre y apellido del paciente:</label>
+                <label>Ingrese el nombre y apellido del paciente:</label><!--Mensaje para indicarle al usuario que ingresar-->
                 <br>
-                <input type="text"name="NombreyApellido" placeholder="Ingrese nombre y apellido" required>
-                 <br>
+                <input type="text"name="nombrePaciente"placeholder= "Ingrese el nombre" required> <input type= "text"name="apellidoPaciente" placeholder= "Ingrese el apellido" required><!--"nombrePaciente" es la variable que vamos a utilizar en Php y usamos Placeholder para mostrar un mensaje de ejemplo en la casilla para ingresar los datos-->
+                 <br><!--El "Required" indica un mensaje del que dato es requerido/obligatorio.-->
                  <label>Tipo de llamado: </label>
                  <br>
-                 <select  type="text" name="Tipo_llamado">
+                 <select  type="text" name="tipoLlamada"><!-- El "Select" se usa para que en esta sección del formulario hayan datos que sean opciones  -->
                      <option value="1">
                          Emergencia
                      </option>
@@ -38,42 +38,44 @@
                  <br>
                  <label>Ingrese la causa por la que fue ingresada el paciente: </label>
                  <br>
-                 <input type="text"name="causa" placeholder="Ingrese la causa" required>
+                 <input type="text"name="causaPaciente" placeholder="Ingrese la causa" required>
                  <br>
                  <label>Fecha en el que fue ingresado: </label>
                  <br>
-                 <input type="date" name="fecha" required>
+                 <input type="date" name="fechaLlamada" required>
                  <br>
                  <label>Ingrese el área en donde fue realizado el llamado:</label>
                  <br>
-                 <select type="text" name="area">
+                 <select type="text" name="areaHospital">
                     <option value="1">
-                        Emergencia
+                        Sala de espera
                     </option>
                 </select>
                  <br>
                  <label>Ingrese donde se origino el llamado</label>
                  <br>
-                     <input type="text"name="origen_llamado" placeholder="Ingrese el origen del llamado." required>
+                     <input type="text"name="origenLlamada" placeholder="Ingrese el origen del llamado." required>
                      <br>
                     <label>¿El paciente fue atendido?</label>
                     <br>
-                    <input type="radio" name="respuesta" value="si" id="si">
-        <label for="si">Sí</label>
-        
-        <input type="radio" name="respuesta" value="no" id="no">
-        <label for="no">No</label>
-        <br>
+                    <select type="text" name="pacienteAsistido">
+                        <option value="1">
+                            Si
+                        </option>
+                        <option value="2">
+                            No
+                        </option>
+                    </select>
         <label>Ingrese el nombre y apellido del efermero/a asignado: </label>
         <br>
-        <input type="text" name="causa" placeholder="Nombre y apellido del profesional" required>
+        <input type="text" name="profesionalAsignado" placeholder="Nombre y apellido del profesional" required>
         <br>
 
 
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar"><!--Botones para enviar y/o borrar los datos del formulario-->
         <input type="reset" value="Cancelar">
         </form>
         </div>
-
+    
 </body>
 </html>
