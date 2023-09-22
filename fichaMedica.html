@@ -6,37 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./img/logo.jpg.jpeg" type="image/x-icon">
-    <title>Ficha Médica</title>
+     <title>Ficha Médica</title><!--Titulo de la página-->
 </head>
 <body>
-    <div id= "container">
+    <div id= "container"><!--Todos los datos que se piden a continuación estarán dentro del contenedor, esto se podrá utilizar para editar el estilo luego.-->
         <header>
-            <h1>Ficha médica a completar del/la paciente </h1>
+            <h1>Ficha médica del paciente </h1><!--título del formulario-->
         </header>
         <div class="clearfix"></div>
         <section id="content">
         </section>
+        <div class="formulario"> <!--Acá se guarda el formulario-->
+            <form action="fichaMedica.php" method="post"><!--Indicamos a donde enviamos los datos y de que forma.-->
+                <br>
         <div class="formulario"> <!--Aca se guarda el formulario-->
             <form action="MediApp.php" method="post">
                 <br>
                 <label>Ingrese el nombre y apellido del paciente:</label>
                 <br>
-                <input type="text"name="NombreyApellido" placeholder="Ingrese nombre y apellido" required>
+                  <input type="text"name="nombrePaciente" placeholder="Ingrese nombre" required><!--"nombrePaciente" es la variable que vamos a utilizar en Php y usamos Placeholder para mostrar un mensaje de ejemplo en la casilla para ingresar los datos-->
+                 <br>
+                 <input type="text"name="apellidoPaciente" placeholder="Ingrese apellido" required>
                  <br>
                  <label>Ingrese el DNI del/la paciente: </label>
                  <br>
-                 <input type="text"name="dni" placeholder="Ingrese el documento" required>
+                 <input type="text"name="DNI" placeholder="Ingrese el documento" required>
                  <br>
                  <label>Fecha de nacimiento: </label>
                  <br>
-                 <input type="date" name="fecha_nac" required>
+                 <input type="date" name="fecNac" required>
                  <br>
                  <label>Nacionalidad: </label>
                  <br>
                 <input type="text"name="nacionalidad" placeholder="Ingrese la nacionalidad." required>
                      <br>
                     <label>Sexo</label>
-                    <select type="text" name="genero">
+                    <select type="text" name="sexo"><!-- El "Select" se usa para que en esta sección del formulario hayan datos que sean opciones  -->
                     <option value="1">
                             Mujer
                     </option>
@@ -58,15 +63,23 @@
         <br>
         <label>Ingrese su barrio: </label>
         <br>
-        <input type="text" name="barrio" placeholder="Ingrese el barrio" required>
-        <br>
+        <label>Barrio</label>
+                    <select type="text" name="barrio">
+                    <option value="1">
+                            Villa del Prado
+                    </option>
+                    <option value="2">
+                        Caceres
+                    </option>
+                   
+                    </select>
         <label>Antecedentes medicos: </label>
         <br>
-        <input type="text" name="antecedes_medicos" placeholder="Ingrese los antecedentes" required>
+        <input type="text" name="antecedentesMedicos" placeholder="Ingrese los antecedentes" required>
         <br>
         <label>Ingrese  sus antecedentes de interes: </label>
         <br>
-        <input type="text" name="antecedentes_de_int" placeholder="Ingrese los antecedentes" required>
+        <input type="text" name="antecedentesInteres" placeholder="Ingrese los antecedentes" required>
         <br>
         <label>Peso: </label>
         <input type="text" name="peso" placeholder="Ingrese el peso" requiered>
@@ -74,7 +87,7 @@
         <label>Altura: </label>
         <input type="text" name="altura" placeholder="Ingrese la altura" required>
         <br>
-
+                
         <input type="submit" value="Enviar">
         <input type="reset" value="Cancelar">
         </form>
