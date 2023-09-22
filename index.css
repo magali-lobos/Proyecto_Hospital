@@ -1,39 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@500&display=swap');
-
+/*Se editan las cosas de manera general*/
 body{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #0fa1fe;
+    background-attachment: fixed; /* Hace que la imagen de fondo no se vea cortada si se modifica el tamaño de pantalla*/
+    max-width: 70px;
+    padding: 0px;/*Mueve el contenido*/
+    background:#05143c;/*Color de fondo*/
+    background-size: cover;/*Indica que la imagen cubre toda la pantalla*/
+    background-repeat: no-repeat;/*Que el fondo no se repita*/
+    height: 100px;/*Altura*/
+    width: auto;/*Ancho automático*/
+    
 }
 
-.contenedor {
-  position: relative;
-  width: 300px; /* Ajusta el ancho y alto según tus necesidades */
-  height: 200px;
-  overflow: hidden;
+
+
+:root{
+  --bg-color:#176ca0;
+  --txt-color:#fff;
+}
+/*Se empieza a editar cada etiqueta*/
+header h1{
+  width: 500px;
+  color: var(--txt-color);/*Color del texto*/
+  font-size: 30px;/*Tamaño de la letra*/
+  margin-left: 500px;/*Margen a la izquierda*/
+  margin-top: 30px;
+  font-family: 'Poppins', sans-serif;/*Fuente de la letra*/
+  text-shadow: 2px 2px 4px #000000;/*Sombra aplicada en la letra*/
+
+
+}
+p{
+  width: 700px;
+  color: var(--txt-color);
+  font-size: 30px;
+  margin-left: 80px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 4px rgb(13, 36, 56);
+  margin-top: 100px;
+}
+.mensaje{/*¿Qué estas buscando?*/
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  margin-left: 300px;
+  margin-top: 30px;
+  width: 700px;
+  color:var(--txt-color);
 }
 
-.contenedor img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.button-container {
+  width: 1850px;
+  display: flex;
+  justify-content: 0px;
+  margin-left: 300px;
+  margin-block-start:-30px;/*Lo usamos para acomodar los botones en el borde superior de la página*/
+  font-size: 150px; /* Designa el espacio entre los botones, mientras más alto el número más espacio le agrega*/
+  
 }
 
-.overlay {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+/*.rectangulo{
+  width: 55%;
+  height: 25%;
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  filter: blur(5px); /* Efecto de desenfoque (ajusta el valor según desees) */
+  background-color: rgb(94, 145, 255);
+  border-radius: 2.5%;
+  z-index: -1;
+  top: 325px;
+  left: 280px;
+  opacity: 0.9;
+}*/
+
+.boton-formulario {
+  background-color: var(--bg-color);
+  border: none; /*Le quitamos el borde*/
+  color:var(--txt-color); /*le cambiamos el color a la letra*/
+  padding: 15px 32px; /*El padding es el espaciado interior*/
+  text-decoration: none; /*Le quitamos la decoracion al texto*/
+  font-size: 15px ; /* Cambiamos el tamaño de la fuente*/
+  border-radius: 50px; /* Le pone bordes redondeados a nuestro boton*/
+  cursor: pointer; /*Modificamos el cursor cuando pasamos por arriba*/
+  margin: 5px;/*Espacio entre los botones*/
+  width: 200px;/*Largo del botón*/
+
 }
 
+/*Edicion de los botones*/
+.boton-formulario:hover{
+  background-color: #88d1ff;
 
+}
 
+.boton-formulario:active{
+  background-color: rgb(245, 245, 217);
+  color: black;
+}
 
+.boton-fichaMedica {
+  background-color:var(--bg-color);
+  border: none; /*le quitamos el borde*/
+  color:rgb(255, 255, 255); /*le cambiamos el color a la letra*/
+  padding: 15px 32px; /*el padding es el espaciado interior*/
+  text-decoration: none; /*le quitamos la decoracion al texyto*/
+  font-size: 15px ; /* cambiamos el tamaño de la fuente*/
+  border-radius: 50px; /* Le pone bordes redondeados a nuestro boton*/
+  cursor: pointer; /*modificamos el cursor cuando pasamos por arriba*/
+  margin: 10px;
+  width: 250px;
 
+}
+.boton-fichaMedica:hover{
+  background-color: #88d1ff;
 
+}
 
+.boton-fichaMedica:active{
+  background-color: rgb(245, 245, 217);
+  color: black;
+}
+.boton-MediApp {
+  background-color:var(--bg-color);
+  border: none; /*le quitamos el borde*/
+  color:rgb(255, 255, 255); /*le cambiamos el color a la letra*/
+  padding: 15px 32px; /*el padding es el espaciado interior*/
+  text-decoration: none; /*le quitamos la decoracion al texto*/
+  font-size: 15px ; /* cambiamos el tamaño de la fuente*/
+  border-radius: 50px; /* Le pone bordes redondeados a nuestro boton*/
+  cursor: pointer; /*modificamos el cursor cuando pasamos por arriba*/
+  margin: 10px;
+  width: 200px;
+}
+.boton-MediApp:hover{
+  background-color: #88d1ff;
+
+}
+
+.boton-MediApp:active{
+  background-color: rgb(245, 245, 217);
+  color: black;
+}
