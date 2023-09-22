@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima&family=Poppins:wght@500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+:root{
+    --bg-color: #161f45;/*Usamos root para declarar los colores que necesitamos y utilizarlos de manerta más rápida*/
+    --text-color:#fff;
+    --main-color:#298cfd;
+}
+/*Comenzamos a editar las etiquetas*/
+body{
+    /*-height: 200vh;/*Epacios de altura y ancho de la pag*/
+    background: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+    height: 100%;
+    width: 101%;
+    padding: 0px;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+.doctores{
+    position:relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap:wrap;
+    top: 170px;
+
+}
+.doctor{
+    overflow:hidden;
+    background: #ffffff;
+    color: #21201e;
+    text-align: center;
+    width: 240px;
+    height: 340px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;/*Posicion de los objetos dentro de las cajas*/
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    margin: 3rem;  
+}
+.doctor:hover img{
+    scale: 1.1;/*Tamaño de la imagen cuando pasamos el cursor por encima*/
+}
+
+.doctor:hover{
+    box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.doctor img{
+    height: 150px;/*Tamaño de la imagen*/
+    margin: 0.7rem;/*Espacio entre la foto y el botón*/
+    transition: all 0.3s;
+}
+.doctor a:link, .doctor a:visited{
+    color: #fbf4f4;/*Color de fuente en los botones*/
+    display: inline-block;
+    text-decoration: none;
+    background-color: #1c6a9a;
+    padding: 1.2rem 3rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    transition: all 0.2s;
+    position:center;
+}
+
+.doctor a:hover{
+    transform: scale(1.1);/*Tamaño del botón cuando pasamos con el cursor*/
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo i{
+    color: var(--main-color);/*Utilizamos el color principal verde, anteriormente declarado*/
+    font-size: 28px;
+    margin-right: 3px;/*Acomodamos el logo en el margen derecho*/
+}
+.logo span{
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.navbar{/*Editamos la barra de navegación*/
+    display: flex;
+}
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 5px 0;
+    margin: 0px 30px;
+    transition: all .50s ease;
+}
+.navbar a:hover{
+    color:var(--main-color)/*Cuando posemos el cursor en las opciones de la navbar cambiará de color*/
+}
+.navbar a.active{
+    color:var(--main-color)
+}
+.main{
+    display: flex;
+    align-items: center;
+}
+.main a{
+    margin-right: 20px;
+    margin-left: 10px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all .50s ease;
+}
+button{
+    background: transparent;
+    border-radius: none;
+    border: none;
+    align-items: center;
+}
+.user{
+    display: flex;
+    align-items: center;
+}
+.user i{
+    color: var(--main-color);
+    font-size: 28px;
+    margin-right: 7px;
+}
+.main a:hover{
+    color: var(--main-color);
+}
+#menu-line{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+@media(max-width: 1280px){
+    header{
+        padding: 14px;
+        transition:  .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px;
+    }
+}
+@media(max-width: 1090px) {
+    #menu-line{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;/*sirve como responsive, cuando la pag se reduce la información se oculta en el menu*/
+        width: 270px;
+        height: 29vh;
+        background: var(--main-color);
+        display: flex;
+        flex-direction: column;/*editamos como van a aparecer los datos cuando toquemos las tres lineas (menu)*/
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 0px 25px;
+        margin: 12px 0;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        color: var(--text-color);
+        transform: translate(5px);
+    }
+    .navbar a.active{
+        color: var(--text-color);
+    }
+    .navbar.open{
+        right: 2%;
+
+    }
+}
+
+
+
