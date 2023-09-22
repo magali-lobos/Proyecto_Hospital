@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
+/*Se importa la fuente para el texto*/
+h1{
+    font-family: 'Poppins', sans-serif; /*Fuente de texto*/
+    font-size: 60px; /*Tamaño de la fuente*/
+    margin-left: 545px; /*Margen desde la izquierda del texto*/
+    margin-top: -10px; /*Margen desde arriba del texto*/
+    color: white; /*Color de la fuente*/
+}
+
+body{
+    background-color: #5a9dc7; /*Color de fondo en caso de que la imagen no aparezca*/
+    /*background-image: url(fondo5.jpg); /*Imagen de fondo*/
+    background-repeat: no-repeat; /*Evita que la imagen se repita*/
+    background-size: 1400px; /*Tamaño de la imagen*/
+    background-position-x: 0px; /*Posición de la imagen en x*/
+    background-position-y: -450px; /*Posición de la imagen desde y*/
+}
+
+#miboton {
+    background-color: #0072bb; /*Color de botón*/
+    font-size: 250px; /*Tamaño del botón*/
+    margin-top: -45px; /*Margen desde arriba*/
+    margin-left: 420px; /*Margen desde la izquierda*/
+    width: 500px; /*Tamaño a lo ancho del botón*/
+    height: 500px; /*Tamaño a lo largo del botón*/
+    border-radius: 75%; /*Le da la forma redonde la botón*/
+    border: 0px; /*Le quita el borde al botón*/
+    position: relative; /*Para que el botón se pueda mover sin afecta los demás elementos*/
+    overflow: hidden; /* Evita que la imagen se desborde del botón */
+    box-shadow: 0px 6px 8px rgb(1, 0, 47, 1); /*Sombra del botón*/
+}
+
+#miboton:active {
+    background-color: blue; /*Color de cuando se presiona el botón*/
+    transform: translateY(20px); /*Le da movimiento al botón cuando se presiona*/
+}
+
+#miboton::before {
+    content: ''; /* Pseudo-elemento para la imagen */
+    display: block; /*Se mueve como un bloque de nivel*/
+    width: 70%; /*Ancho de la imagen*/
+    height: 70%; /*Alto de la imagen*/
+    background-image: url('mano.png'); /*Imagen que contiene el botón*/
+    background-size: contain; /*Hace que la imagen ocupe todo el espacio del boton*/
+    background-repeat: no-repeat; /*Evita que se repita a imagen*/
+    background-position: center; /*Posición de la imagen*/
+    position: absolute; /*Se posiciona de forma absoluta en relación al botón*/
+    top: 70px; /*Espacio desde arriba*/
+    left: 70px; /*Espacio desde la iquierda*/
+}
+
+#corazon{
+    position: relative; /*Se mueve sin afectar el resto de elementos*/
+    top: 5px; /*Espacio desde arriba*/
+    width: 30px; /*Tamaño a lo ancho*/
+    left: 1165px; /*Espacio desde la izquierda*/
+}
+
+h2{
+    font-family: 'Poppins', sans-serif; /*Fuente del texto*/
+    font-size: 20px; /*Tamaño de la fuente*/
+    margin-top: -20px; /*Margen desde arriba*/
+    margin-left: 5px; /*Margen desde la izquierda*/
+    color: white; /*Color de la fuente*/
+    position: absolute;
+}
+
+h3{
+    font-family: 'Poppins', sans-serif; /*Fuente del texto*/
+    font-size: 28px; /*Tamaño de la fuente*/
+    margin-top: -35px; /*Margen desde arriba*/
+    margin-left: 1200px; /*Margen desde la izquierda*/
+    color: white; /*Color de la fuente*/
+    position: absolute;
+}
