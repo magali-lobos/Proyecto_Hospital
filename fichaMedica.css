@@ -2,17 +2,17 @@
 body{ /*fondo del formulario*/
     background-attachment: fixed;
     max-width: 385px;
-    background-color: #0fa1fe;
+    background-color:#1258ba;
     background-size: cover;
     align-items: center;
     height: 325px;
   background-repeat: no-repeat;
 }
 header h1{ /*esto modifica el titulo principal de la pagina */
-  width: 1350px;
+  width: 1250px;
   font-family: 'Poppins', sans-serif;
   font-size: 40px;
-  color: black;
+  color: rgb(254, 254, 254);
   text-align: center;
 
   }
@@ -24,7 +24,7 @@ header h1{ /*esto modifica el titulo principal de la pagina */
     margin: 0px;
     opacity: 0.5;
     position: relative;
-    border: 1px solid rgb(9, 6, 194);
+    border: 1px solid rgb(244, 244, 250);
     border-radius: 10%;
 }
 .formulario{ /* modifica todo lo que abarca el formulario*/
@@ -50,7 +50,7 @@ header h1{ /*esto modifica el titulo principal de la pagina */
     padding: 10px;
   }
   .formulario form select{ /*casillas a completar del formulario*/
-    border: 2px solid #0fa1fe;
+    border: 2px solid #ffffff;
     margin-top: 10px;
     background-color: rgb(255, 255, 255);
     border-radius: 1rem;
@@ -73,3 +73,9 @@ header h1{ /*esto modifica el titulo principal de la pagina */
 .formulario form input[type="submit"]:hover, .formulario form input[type="reset"]:hover {
   background-color: #0056b3; /* Cambia el color de fondo al pasar el mouse */
 }
+
+
+
+
+
+
